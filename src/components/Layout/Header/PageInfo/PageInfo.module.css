@@ -1,0 +1,210 @@
+@keyframes stretch-short {
+  50% {
+    width: 20%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+@keyframes stretch-long {
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.pageContent {
+  padding-left: 40px;
+}
+
+@media (max-width: 400px) {
+  .pageContent {
+    padding-left: 10px;
+  }
+}
+
+.pageContent > img {
+  height: 45px;
+  width: 45px;
+}
+
+.arrowButtons {
+  margin: auto 0;
+  padding-left: 10px;
+  padding-right: 25px;
+  gap: 10px;
+  background-color: var(--maroon-2);
+  display: flex;
+}
+
+.arrowButtons > button {
+  border: none;
+  background-color: transparent;
+}
+
+.arrowButtons > button svg {
+  fill: var(--mint-1);
+}
+
+.arrowButtons > :first-child svg {
+  transform: rotate(-90deg) scale(1.2);
+}
+
+.arrowButtons > :last-child svg {
+  transform: rotate(90deg) scale(1);
+  opacity: 0.5;
+}
+
+.edge {
+  width: 50px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: auto;
+}
+
+.edge > div {
+  height: 13%;
+  width: 100%;
+  background-color: var(--maroon-3);
+  animation: stretch-long 2.5s infinite linear;
+}
+
+.edge > :nth-child(even) {
+  width: 50%;
+  animation: stretch-short 3.5s infinite linear;
+}
+
+.teaminfo {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Start of background-related styles */
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  transform: skew(-15deg);
+}
+
+.backgroundinner {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  background-color: var(--maroon-3);
+}
+
+.stripes {
+  height: 100%;
+  display: flex;
+  background-color: var(--maroon-2);
+  transform: translateX(-10px);
+}
+
+.stripes > div {
+  height: 100%;
+  width: 5px;
+  background-color: var(--mint-1);
+}
+
+.stripes > :first-child {
+  width: 13px;
+  background-color: var(--mint-1);
+  margin-right: 8px;
+}
+
+.bigStripe {
+  width: 50px;
+  background-color: var(--maroon-2);
+  transform: translateX(-10px);
+}
+
+.smallStripes {
+  transform: translateX(-10px);
+  gap: 7px;
+}
+
+.smallStripes > div {
+  width: 8px;
+  height: 100%;
+  background-color: var(--maroon-2);
+}
+
+.gap {
+  width: 100%;
+  height: 100%;
+  background-color: var(--maroon-3);
+}
+
+.closeEdge {
+  width: 100px;
+  background-color: var(--maroon-3);
+  padding-right: 20px;
+}
+
+.closeEdge > div {
+  background-color: var(--maroon-4);
+  width: 100%;
+  height: 8px;
+}
+
+/* End of background-related styles */
+
+.controllers > :first-child svg {
+  transform: rotate(-180deg);
+}
+
+.controllers > button svg {
+  fill: var(--mint-1);
+}
+
+.controllers > :first-child {
+  transform: translateY(7px);
+}
+
+.controllers > :last-child {
+  transform: translateY(-7px);
+}
+
+.magnifyingGlass {
+  height: 20px;
+  width: 20px;
+  fill: var(--mint-1);
+}
+
+.teamData {
+  margin-left: 10px;
+}
+
+.teamData > * {
+  margin: 0;
+  padding: 0;
+}
+
+.teamData > h1 {
+  color: var(--mint-2);
+  font-size: 20px;
+}
+
+.teamData > p {
+  color: var(--mint-2);
+  max-width: 85%;
+}
+
+@media (max-width: 935px) {
+  .arrowButtons {
+    display: none !important;
+  }
+}

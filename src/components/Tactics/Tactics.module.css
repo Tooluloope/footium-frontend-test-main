@@ -1,0 +1,35 @@
+.main {
+  gap: 10px;
+  width: 100%;
+  height: calc(100% - 47px);
+  min-height: fit-content;
+}
+
+@media (max-width: 1650px) {
+  .main {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 960px) {
+  .menu {
+    display: none;
+  }
+}
+
+.main > div {
+  flex: 1 1 0;
+  height: 100%;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+}
+
+.menu {
+  height: 47px;
+}
