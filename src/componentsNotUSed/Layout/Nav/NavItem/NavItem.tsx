@@ -1,7 +1,7 @@
-import React from "react";
-import { NavItemProps } from "./types";
 import classes from "./NavItem.module.css";
-import { mc } from "@footium/utility/functions";
+import { NavItemProps } from "./types";
+import React from "react";
+import { mc } from "utility/functions";
 
 const NavItem: React.FC<NavItemProps> = ({
   Svg,

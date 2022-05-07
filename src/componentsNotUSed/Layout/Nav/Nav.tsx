@@ -1,7 +1,7 @@
-import React from "react";
-import { navItems } from "./constants";
-import NavItem from "./NavItem";
 import classes from "./Nav.module.css";
+import NavItem from "./NavItem";
+import { navItems } from "./constants";
+import React from "react";
 
 const Nav: React.FC = () => (
   <div className={classes.container}>

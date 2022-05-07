@@ -1,7 +1,7 @@
-import React from "react";
-import { mc } from "@footium/utility/functions";
-import { ReactComponent as ArrowHead } from "@footium/assets/svgs/arrow-head.svg";
+import { ReactComponent as ArrowHead } from "../../../assets/svgs/arrow-head.svg";
+import { mc } from "../../../utility/functions";
 import classes from "./Menu.module.css";
+import React from "react";
 
 const Menu: React.FC = () => (
   <ul className={mc("my-0 d-flex", classes.menu)}>

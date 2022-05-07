@@ -1,9 +1,8 @@
-import React from "react";
+import { mc } from "../../../utility/functions";
+import classes from "./Header.module.css";
 import PageInfo from "./PageInfo";
 import ProfileInfo from "./ProfileInfo";
-
-import classes from "./Header.module.css";
-import { mc } from "@footium/utility/functions";
+import React from "react";
 
 const Header: React.FC = () => (
   <div className="h-100 d-flex">

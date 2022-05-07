@@ -1,9 +1,9 @@
-import React from "react";
-import { mc } from "@footium/utility/functions";
-import { ReactComponent as GlobeSvg } from "@footium/assets/svgs/globe.svg";
-import { ReactComponent as QuestionMarkSvg } from "@footium/assets/svgs/question-mark.svg";
-import { ReactComponent as ArrowHead } from "@footium/assets/svgs/arrow-head.svg";
 import classes from "./ProfileInfo.module.css";
+import { ReactComponent as ArrowHead } from "assets/svgs/arrow-head.svg";
+import { ReactComponent as GlobeSvg } from "assets/svgs/globe.svg";
+import { ReactComponent as QuestionMarkSvg } from "assets/svgs/question-mark.svg";
+import React from "react";
+import { mc } from "utility/functions";
 
 const ProfileInfo: React.FC = () => (
   <div className="d-flex align-items-center w-100 h-100">

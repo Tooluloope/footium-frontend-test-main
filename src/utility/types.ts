@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export type ConditionalClass = [boolean, ...(string | ConditionalClass)[]];
 export type SvgComponent = React.FunctionComponent<
   React.SVGProps<SVGSVGElement> & {
@@ -69,4 +71,7 @@ export interface TacticsContainerProps {
   formations: FormationKey[];
   playerJerseyUrl: string;
   gkJerseyUrl: string;
+}
+export interface FunctionalComponentWithChildren {
+  children?: ReactNode;
 }

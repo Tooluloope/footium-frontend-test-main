@@ -1,10 +1,11 @@
-import React from "react";
-import { mc } from "@footium/utility/functions";
 import Header from "./Header";
-import Nav from "./Nav";
 import classes from "./Layout.module.css";
+import Nav from "./Nav";
+import React from "react";
+import { mc } from "utility/functions";
+import { FunctionalComponentWithChildren } from "utility/types";
 
-const Layout: React.FC = ({ children }) => (
+const Layout: React.FC<FunctionalComponentWithChildren> = ({ children }) => (
   <div className={mc("vw-100 d-flex", classes.container)}>
     <div className={mc("position-absolute w-100 h-100", classes.background)}>
       <div className={classes.stripe1} />

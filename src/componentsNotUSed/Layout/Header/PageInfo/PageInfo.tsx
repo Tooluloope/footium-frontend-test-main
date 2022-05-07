@@ -1,9 +1,9 @@
-import React from "react";
-import { ReactComponent as ArrowSvg } from "@footium/assets/svgs/arrow.svg";
-import { ReactComponent as ArrowHeadSvg } from "@footium/assets/svgs/arrow-head.svg";
-import { ReactComponent as MagnifyingGlassSvg } from "@footium/assets/svgs/magnifying-glass.svg";
-import { mc } from "@footium/utility/functions";
 import classes from "./PageInfo.module.css";
+import { ReactComponent as ArrowHeadSvg } from "assets/svgs/arrow-head.svg";
+import { ReactComponent as ArrowSvg } from "assets/svgs/arrow.svg";
+import { ReactComponent as MagnifyingGlassSvg } from "assets/svgs/magnifying-glass.svg";
+import React from "react";
+import { mc } from "utility/functions";
 
 const PageInfo: React.FC = () => (
   <div className={mc("d-flex w-100 align-items-center h-100", classes.wrapper)}>
