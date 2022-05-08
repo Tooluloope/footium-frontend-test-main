@@ -1,22 +1,34 @@
-import { ConditionalClass } from "./types";
+import { Team, Player } from "utility/types"
+import { RootState } from "store"
 
 /**
- * This function allows you to combine sevral classNames together.
- * For conditional classes, just pass in the condition (boolean)
- * as the first elemnt in the array and pass the classes you want
- * to merge as the other items in the array.
+ * This function normalizes data for the store
  */
-export const mc = (...args: (string | ConditionalClass)[]): string => {
-  return args.reduce((accumulator: string, currentValue) => {
-    if (Array.isArray(currentValue)) {
-      const bool = currentValue.shift();
-      if (bool)
-        return `${accumulator} ${mc(
-          ...(currentValue as (string | ConditionalClass)[])
-        )}`;
-      return accumulator;
+export const normalizeData = (
+    data: Team
+): {
+    playersId: string[]
+    subsId: string[]
+    allPlayers: Player[]
+} => {
+    const playersId: string[] = []
+    const subsId: string[] = []
+    const allPlayers: Player[] = [...data.firstEleven, ...data.subs]
+
+    data.firstEleven.forEach((player) => playersId.push(player.id))
+
+    data.subs.forEach((player) => subsId.push(player.id))
+
+    return {
+        playersId,
+        subsId,
+        allPlayers,
     }
-    if (!currentValue) return accumulator;
-    return `${accumulator ? `${accumulator} ` : ""}${currentValue}`;
-  }, "");
-};
+}
+
+/**
+ * This function helps find Player by ID
+ */
+export const getPlayerById = (playerId: string) => (store: RootState) => {
+    return store.players.allPlayers.find(({ id }) => playerId === id)
+}
