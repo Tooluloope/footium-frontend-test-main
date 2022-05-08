@@ -9,7 +9,7 @@ export const Layout = () => {
             <Box
                 display="flex"
                 justifyContent={"space-between"}
-                maxW="container.lg"
+                maxW="1440px"
                 mx="auto"
             >
                 <FootballPitchLayout />

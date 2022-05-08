@@ -7,7 +7,7 @@ export const SubLayout = () => {
     const subs = useAppSelector((state) => state.players.subsId)
 
     return (
-        <Flex flexDir={"column"} py="20px">
+        <Flex flexDir={"column"} p="20px">
             <Box my="20px">
                 <Text
                     fontWeight="bold"

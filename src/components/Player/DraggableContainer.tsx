@@ -61,7 +61,7 @@ export const DraggableContainer: React.FC<
 
     return (
         <Box
-            maxW="156px"
+            maxW="206px"
             w="full"
             mx="auto"
             px="3px"

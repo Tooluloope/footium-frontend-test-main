@@ -12,9 +12,9 @@ export const PlayerNameContainer = ({
     return (
         <Box
             backgroundColor={"rgb(9,79,66)"}
-            maxW="150px"
+            maxW="200px"
             w="full"
-            height={!isSub ? "40px" : "30px"}
+            height={!isSub ? "50px" : "40px"}
             pt={!isSub ? "10px" : "0px"}
             borderRadius="10px"
             color={"rgb(208,219,217)"}
@@ -23,7 +23,7 @@ export const PlayerNameContainer = ({
             justifyContent="center"
             alignItems={"center"}
             fontWeight="medium"
-            fontSize={"15px"}
+            fontSize={"20px"}
         >
             {name}
             <Box

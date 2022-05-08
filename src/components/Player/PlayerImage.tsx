@@ -12,16 +12,20 @@ export const PlayerImage = ({ jerseyNumber, position }: PlayerImageProps) => {
     const isGK = position === "GK"
     return (
         <Box
-            maxW="50px"
+            maxW="100px"
             mx="auto"
             marginBottom={"-8px"}
             zIndex="2"
             pos={"relative"}
         >
-            <Image src={isGK ? goalKeeper : player} alt="player" />
+            <Image
+                draggable="false"
+                src={isGK ? goalKeeper : player}
+                alt="player"
+            />
             <Text
                 fontWeight="bold"
-                fontSize={"15px"}
+                fontSize={"20px"}
                 color={"rgb(255,255,255)"}
                 top={"50%"}
                 left={"50%"}

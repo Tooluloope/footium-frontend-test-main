@@ -21,7 +21,7 @@ const PitchBox = () => (
 export const FootballPitchLayout = () => {
     return (
         <Box
-            maxW={"800px"}
+            // maxW={"800px"}
             height="100vh"
             flex={"1 1 0"}
             p="20px"

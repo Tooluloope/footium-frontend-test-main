@@ -11,9 +11,9 @@ export const PlayerPositionContainer = ({
     return (
         <Box
             backgroundColor={"rgb(39,45,51)"}
-            maxW="150px"
+            maxW="200px"
             w="full"
-            height={"30px"}
+            height={"50px"}
             borderRadius="10px"
             color={"rgb(255,255,255)"}
             position="relative"
@@ -21,7 +21,7 @@ export const PlayerPositionContainer = ({
             justifyContent="center"
             alignItems={"center"}
             fontWeight="medium"
-            fontSize={"15px"}
+            fontSize={"20px"}
             marginBottom="-13px"
             zIndex={1}
         >
@@ -43,15 +43,15 @@ export const PlayerPositionContainerSub = ({
 }: PlayerPositionContainerProps) => {
     return (
         <Box
-            maxW="150px"
+            maxW="200px"
             w="full"
-            height={"20px"}
+            height={"40px"}
             color={"rgb(255,255,255)"}
             display={"flex"}
             justifyContent="center"
             alignItems={"center"}
             fontWeight="medium"
-            fontSize={"15px"}
+            fontSize={"20px"}
         >
             {position}
         </Box>
