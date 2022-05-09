@@ -21,16 +21,21 @@ export const PlayerLayout = () => {
 
     useEffect(() => {
         const formation = formations.split("-").map(Number)
-        const goalKeeper = firstEleven.slice(-1)
-        const forward = firstEleven.slice(0, formation[2])
-        const midfielders = firstEleven.slice(
+        const numberOfPlayers = [
             formation[2],
-            formation[1] + formation[2]
+            formation[2] + formation[1],
+            formation[2] + formation[1] + formation[0],
+        ]
+        const goalKeeper = firstEleven.slice(-1)
+        const forward = firstEleven.slice(0, numberOfPlayers[0])
+        const midfielders = firstEleven.slice(
+            numberOfPlayers[0],
+            numberOfPlayers[1]
         )
 
         const defenders = firstEleven.slice(
-            formation[1] + formation[2],
-            formation[1] + formation[2] + formation[0]
+            numberOfPlayers[1],
+            numberOfPlayers[2]
         )
         setArrangeMent({ forward, midfielders, defenders, goalKeeper })
     }, [firstEleven, formations])
