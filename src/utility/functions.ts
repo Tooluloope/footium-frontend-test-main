@@ -2,7 +2,7 @@ import { Team, Player } from "utility/types"
 import { RootState } from "store"
 
 /**
- * This function normalizes data for the store
+ * This function normalizes Team data for the store
  */
 export const normalizeData = (
     data: Team

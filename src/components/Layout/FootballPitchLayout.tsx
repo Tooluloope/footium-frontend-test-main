@@ -2,9 +2,10 @@ import { Box, Grid, GridItem, Text } from "@chakra-ui/react"
 import React from "react"
 import { PitchOutline } from "./PitchOutLine"
 import { PlayerLayout } from "./PlayerLayout"
+import { SelectFormation } from "./SelectFormation"
 
 const NUM_BOXES_ON_PITCH = 35
-var colors = [
+const colors = [
     "rgb(62, 154, 52)",
     "rgb(80,135,38)",
     "rgb(62, 154, 52)",
@@ -22,7 +23,8 @@ export const FootballPitchLayout = () => {
     return (
         <Box
             // maxW={"800px"}
-            height="100vh"
+            minH="100vh"
+            height={"full"}
             flex={"1 1 0"}
             p="20px"
             display={"flex"}
@@ -36,13 +38,7 @@ export const FootballPitchLayout = () => {
                 >
                     Formation
                 </Text>
-                <Text
-                    fontWeight="bold"
-                    fontSize={"15px"}
-                    color={"rgb(255,255,255)"}
-                >
-                    4-3-3 WIDE
-                </Text>
+                <SelectFormation />
             </Box>
             <Box
                 w="full"
@@ -57,6 +53,7 @@ export const FootballPitchLayout = () => {
                     //     transform: "rotateX(20deg)",
                     // }}
                     w="full"
+                    minH="100vh"
                     h="full"
                     templateColumns="repeat(5, 1fr)"
                     border="1px solid white"

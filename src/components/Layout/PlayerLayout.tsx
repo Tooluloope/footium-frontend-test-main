@@ -5,6 +5,7 @@ import { Player } from "../Player/index"
 
 export const PlayerLayout = () => {
     const firstEleven = useAppSelector((state) => state.players.playersId)
+    const formations = useAppSelector((state) => state.formations.formation)
 
     const [arrangeMent, setArrangeMent] = useState<{
         forward: string[]
@@ -19,12 +20,20 @@ export const PlayerLayout = () => {
     })
 
     useEffect(() => {
+        const formation = formations.split("-").map(Number)
         const goalKeeper = firstEleven.slice(-1)
-        const forward = firstEleven.slice(0, 3)
-        const midfielders = firstEleven.slice(3, 6)
-        const defenders = firstEleven.slice(6, 10)
+        const forward = firstEleven.slice(0, formation[2])
+        const midfielders = firstEleven.slice(
+            formation[2],
+            formation[1] + formation[2]
+        )
+
+        const defenders = firstEleven.slice(
+            formation[1] + formation[2],
+            formation[1] + formation[2] + formation[0]
+        )
         setArrangeMent({ forward, midfielders, defenders, goalKeeper })
-    }, [firstEleven])
+    }, [firstEleven, formations])
     const ForwardLine = useMemo(
         () => () => {
             return (

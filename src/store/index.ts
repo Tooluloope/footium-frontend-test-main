@@ -9,6 +9,7 @@ import {
     REGISTER,
 } from "redux-persist"
 import storage from "redux-persist/lib/storage"
+import formationReducer, { formationSlice } from "./FormationSlice"
 import playersReducer, { playersSlice } from "./PlayersSlice"
 
 const persistConfig = {
@@ -19,6 +20,7 @@ const persistConfig = {
 
 export const rootReducer = combineReducers({
     [playersSlice.name]: playersReducer,
+    [formationSlice.name]: formationReducer,
 })
 const persistedReducer = persistReducer(persistConfig, rootReducer)
 
